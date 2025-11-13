@@ -24,6 +24,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import Image from "next/image";
 
 const RegisterSchema = z.object({
   email: z.email("Please enter a valid email address"),
@@ -86,6 +87,7 @@ const RegisterForm = () => {
                   type="button"
                   disabled={isPending}
                 >
+                  <Image src="/logos/github.svg" width={20} height={20} alt="github" />
                   Continue with GitHub
                 </Button>
                 <Button
@@ -94,6 +96,7 @@ const RegisterForm = () => {
                   type="button"
                   disabled={isPending}
                 >
+                  <Image src="/logos/google.svg" width={20} height={20} alt="google" />
                   Continue with Google
                 </Button>
               </div>
